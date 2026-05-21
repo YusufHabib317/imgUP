@@ -1,0 +1,37 @@
+# ImgUp
+
+> Instant image hosting with permanent shareable links. No account required.
+
+ImgUp is a fast, free image hosting service. Upload any image and instantly receive a permanent, shareable URL. Built for developers, designers, and teams who need reliable image hosting without friction.
+
+## Features
+
+- Instant upload via drag-and-drop or file picker
+- Permanent shareable links (no expiry)
+- No account or sign-up required
+- Supports JPEG, PNG, GIF, WebP, and SVG
+- Direct image URLs for embedding anywhere
+
+## How it works
+
+1. Visit the homepage
+2. Drop an image or click to select a file
+3. Copy the generated shareable link
+4. Share or embed the image anywhere
+
+## Use cases
+
+- Share screenshots and mockups with teammates
+- Embed images in documentation, READMEs, or blog posts
+- Quick image hosting for prototypes and demos
+- Attach images to bug reports or support tickets
+
+## Technical
+
+- Built with Next.js and UploadThing
+- Images served via CDN for fast global delivery
+- Supports files up to 4MB
+
+## Contact
+
+For issues or feedback: https://imgup.app

@@ -1,0 +1,53 @@
+{
+  "name": "mantine-minimal-next-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@mantine/core": "9.2.1",
+    "@mantine/dropzone": "^9.2.1",
+    "@mantine/hooks": "9.2.1",
+    "@neondatabase/serverless": "^1.1.0",
+    "@uploadthing/react": "^7.3.3",
+    "dayjs": "^1.11.20",
+    "drizzle-orm": "^0.45.2",
+    "next": "16.2.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "uploadthing": "^7.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.3",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "^19.2.1",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "^0.31.10",
+    "eslint": "^9",
+    "eslint-config-next": "16",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-sonarjs": "^4.0.2",
+    "oxlint": "^1.58.0",
+    "postcss": "^8.5.6",
+    "postcss-preset-mantine": "1.18.0",
+    "postcss-simple-vars": "^7.0.1",
+    "prettier": "^3.8.1",
+    "typescript": "6.0.2"
+  },
+  "packageManager": "yarn@4.14.1"
+}
