@@ -3,7 +3,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useUploadThing } from '../utils/uploadthing';
 import type { UploadCard } from './upload/types';
-import { MAX_SIZE } from './upload/types';
+import { MAX_SIZE, MAX_FILES } from './upload/types';
 import { formatSize, genId, extOf } from './upload/utils';
 import { AlertIcon } from './upload/icons';
 import { CardItem } from './upload/CardItem';
@@ -82,6 +82,11 @@ export function UploadPanel() {
   const enqueueFiles = useCallback(
     (files: File[]) => {
       setError(null);
+
+      if (files.length > MAX_FILES) {
+        setError(`Too many files — up to ${MAX_FILES} at a time.`);
+        return;
+      }
 
       const tooBig = files.filter((f) => f.size > MAX_SIZE);
       if (tooBig.length) {

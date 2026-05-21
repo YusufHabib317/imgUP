@@ -4,10 +4,10 @@ const f = createUploadthing();
 
 export const ourFileRouter = {
   imageUploader: f({
-    'image/png': { maxFileSize: '16MB', maxFileCount: 10 },
-    'image/jpeg': { maxFileSize: '16MB', maxFileCount: 10 },
-    'image/gif': { maxFileSize: '16MB', maxFileCount: 10 },
-    'image/webp': { maxFileSize: '16MB', maxFileCount: 10 },
+    'image/png': { maxFileSize: '16MB', maxFileCount: 5 },
+    'image/jpeg': { maxFileSize: '16MB', maxFileCount: 5 },
+    'image/gif': { maxFileSize: '16MB', maxFileCount: 5 },
+    'image/webp': { maxFileSize: '16MB', maxFileCount: 5 },
   }).onUploadComplete(async ({ file }) => {
     const base = process.env.NEXT_PUBLIC_BASE_URL ?? '';
     return { url: `${base}/f/${file.key}`, name: file.name };

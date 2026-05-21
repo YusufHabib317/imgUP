@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { ACCEPTED } from './types';
+import { ACCEPTED, MAX_FILES } from './types';
 import { UploadIcon } from './icons';
 
 function dzLabel(state: 'idle' | 'dragover' | 'reject'): string {
@@ -72,7 +72,7 @@ export function Dropzone({ onFiles }: { onFiles: (files: File[]) => void }) {
       <p className="dz-sub">
         PNG<span className="sep">·</span>JPG<span className="sep">·</span>GIF
         <span className="sep">·</span>WEBP<span className="sep">·</span>up to 16
-        MB
+        MB<span className="sep">·</span>max {MAX_FILES} at once
       </p>
       <input
         ref={inputRef}

@@ -17,3 +17,5 @@ export interface UploadCard {
 export const ACCEPTED = ['image/png', 'image/jpeg', 'image/gif', 'image/webp'];
 
 export const MAX_SIZE = 16 * 1024 * 1024;
+
+export const MAX_FILES = 5;
