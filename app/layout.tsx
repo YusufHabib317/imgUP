@@ -11,6 +11,7 @@ import {
 } from '@mantine/core';
 import { NextSSRPlugin } from '@uploadthing/react/next-ssr-plugin';
 import { extractRouterConfig } from 'uploadthing/server';
+import Script from 'next/script';
 import { ourFileRouter } from './api/uploadthing/core';
 import { theme } from '../theme';
 
@@ -81,6 +82,14 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript defaultColorScheme="dark" />
         <link rel="shortcut icon" href="/favicon.svg" />
+        <Script
+          src="https://pl29526082.effectivecpmnetwork.com/d8/cd/43/d8cd43821851a658ba6ebdc0e96cb6bc.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://pl29526081.effectivecpmnetwork.com/79/25/7c/79257c0d14f0dfb2382a7d1e93841939.js"
+          strategy="beforeInteractive"
+        />
         <style>{`
           :root {
             --font-body: var(--font-inter), system-ui, sans-serif;
