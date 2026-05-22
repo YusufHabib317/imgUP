@@ -56,14 +56,14 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description:
       'Upload images instantly and get a permanent shareable link. No account needed.',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'ImgUp' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'ImgUp' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE_TITLE,
     description:
       'Upload images instantly and get a permanent shareable link. No account needed.',
-    images: ['/og.png'],
+    images: ['/og-image.png'],
   },
   alternates: { canonical: BASE_URL },
 };
