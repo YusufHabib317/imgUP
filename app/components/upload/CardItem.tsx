@@ -4,7 +4,8 @@ import { useState, useRef } from 'react';
 import type { UploadCard } from './types';
 import { formatSize, relativeTime } from './utils';
 import { PrettyUrl } from './PrettyUrl';
-import { CopyIcon, CheckIcon, ExtIcon } from './icons';
+import { CopyIcon, CheckIcon, ExtIcon, LockIcon } from './icons';
+import { SecretModal } from './SecretModal';
 
 function CardThumb({
   thumbUrl,
@@ -73,6 +74,7 @@ export function CardItem({
   onRemove: (id: string) => void;
 }) {
   const [copied, setCopied] = useState(false);
+  const [secretOpen, setSecretOpen] = useState(false);
   const copyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const uploading = card.status === 'uploading';
 
@@ -131,9 +133,18 @@ export function CardItem({
             >
               Open in new tab <ExtIcon />
             </a>
-            <button className="ghost-btn" onClick={() => onRemove(card.id)}>
-              remove
-            </button>
+            <div className="sub-row-actions">
+              <button
+                className="ghost-btn ghost-btn-accent"
+                onClick={() => setSecretOpen(true)}
+                title="Hide an encrypted message inside this image"
+              >
+                <LockIcon /> hide message
+              </button>
+              <button className="ghost-btn" onClick={() => onRemove(card.id)}>
+                remove
+              </button>
+            </div>
           </div>
         )}
 
@@ -146,6 +157,10 @@ export function CardItem({
           </div>
         )}
       </div>
+
+      {secretOpen && (
+        <SecretModal card={card} onClose={() => setSecretOpen(false)} />
+      )}
     </div>
   );
 }

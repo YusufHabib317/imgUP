@@ -1,4 +1,5 @@
 import { Box, Group, Image, Text, Title } from '@mantine/core';
+import Link from 'next/link';
 import { UploadPanel } from './components/UploadPanel';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://imgup.app';
@@ -51,6 +52,13 @@ export default function HomePage() {
             </Text>
           </Group>
           <Group gap={18} className="topbar-right" wrap="nowrap">
+            <Link
+              href="/d"
+              className="item"
+              style={{ color: 'var(--text-muted)', textDecoration: 'none' }}
+            >
+              decrypt
+            </Link>
             <Text component="span" inherit className="item">
               <Box component="span" className="status-dot" />
               edge·sfo
